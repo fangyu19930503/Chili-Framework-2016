@@ -99,7 +99,7 @@ void Game::ComposeFrame()
 	}			//若所有便便被吃掉，就会得到gameover=1，
 	
 	if(gameOver)//若游戏结束了
-	derawEnd(Graphics::center.x - endRes.x*0.5, Graphics::center.y - endRes.y*0.5); // 绘制封面
+	derawEnd(Graphics::center.x - endRes.x*0.5, Graphics::center.y - endRes.y*0.5); // 绘制封面///052D
 	
 	
 	
