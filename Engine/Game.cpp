@@ -89,15 +89,16 @@ void Game::ComposeFrame()
 		PlayerA.drawPlayerA(gfx);//玩家的脸
 		PlayerB.drawPlayerB(gfx);
 	}
-	bool allDie = 1;
+	/*bool allDie = 1;
 	for (int i = 0; i < numPoo; i++)
 	{
 		allDie = allDie && poo[i].geteatenorNot();//两者都为真，结果才为真，只有一个便便存活，两者的逻辑运算就不为真
 		gameOver = allDie;
 		if (!poo[i].geteatenorNot())
 			poo[i].draw(gfx);
-	}			//若所有便便被吃掉，就会得到gameover=1，
-	
+	}			//若所有便便被吃掉，就会得到gameover=1，*/
+	if (poo[0].getNumPoos() == 0)
+		gameOver = 1;
 	if(gameOver)//若游戏结束了
 	derawEnd(Graphics::center.x - endRes.x*0.5, Graphics::center.y - endRes.y*0.5); // 绘制封面///052D
 	

@@ -21,6 +21,7 @@ public:
 	int getEaterId() const {return eaterId;}//获取玩家ID
 	
 	static constexpr Vec2 res{ 24,24 };//屎的分辨率
+	int getNumPoos()const { return numPoos; }//返回存活的便便
 
 private:
 	
@@ -37,5 +38,6 @@ private:
 	Vec2 v = { 2,2 };
 	bool eaten = 0;//吃掉了么,默认没有
 	int eaterId = -1;
+	static int numPoos;//便便总数
 };
 

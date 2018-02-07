@@ -12,6 +12,8 @@ poo::poo()
 	pos.y = fity(random);
 	v.x = fitVx(random);
 	v.y = fitVy(random);
+	
+	numPoos ++ ;
 
 }
 void poo::move()
@@ -271,6 +273,7 @@ void poo::panduancollied( Player & a)
 {
 	//if (eaten ==0)
 	{
+		//static int i = numPoos;//第一次运行这个函数，i会初始化，以后就会读取前一次的值
 		if (a.getPos().x > pos.x - 5 &&
 			a.getPos().x < pos.x + res.x + 5 &&
 			a.getPos().y > pos.y - 5 &&
@@ -278,6 +281,8 @@ void poo::panduancollied( Player & a)
 		{
 			eaten = 1;
 			eaterId = a.getPlayerId();
+			
+			numPoos --;
 		}
 	}
 	
